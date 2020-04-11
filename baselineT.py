@@ -48,7 +48,7 @@ transform = transforms.Compose([transforms.Resize(64), transforms.ToTensor(), tr
 dataset = datasets.ImageFolder(args.dataset_dir, transform=transform)
 loader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=2)
 
-discriminator = models.Discriminator_patch(channels=3, patch_sz=8, whole_img=True).cuda()
+discriminator = models.Discriminator_patch(channels=3).cuda()
 generator = torch.load(args.pretrained_model).cuda()
 
 optim_disc = optim.Adam(filter(lambda p: p.requires_grad, discriminator.parameters()), lr=args.lr, betas=(0.5,0.9))

@@ -146,7 +146,7 @@ def train(epoch):
                 torch.save(discriminator, os.path.join(checkpoint_dir, 'disc_{}'.format(epoch)))
                 torch.save(generator, os.path.join(checkpoint_dir, 'gen_{}'.format(epoch)))
                 torch.save(encoder_t, os.path.join(checkpoint_dir, 'enc_t_{}'.format(epoch)))
-                torch.save(encoder_c, os.path.join(checkpoint_dir, 'enc_{}'.format(epoch)))
+                torch.save(encoder_c, os.path.join(checkpoint_dir, 'enc_c_{}'.format(epoch)))
 
 
 	    if iters % 100 == 0:
