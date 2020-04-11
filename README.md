@@ -6,8 +6,7 @@
   * **CoGAN:** python CoGAN.py --dataset_dir_S <source_dataset_path> --dataset_dir_T <target_dataset_path> --gpu 0 
   * **UNIT:** python UNIT.py --dataset_dir_S <source_dataset_path> --dataset_dir_T <target_dataset_path> --gpu 0 
 * PFS-GAN Training
-  * **Stage1 Training:** python stage1.py --dataset_dir <source_dataset_path> --gpu 0 
-  * Copy **'gen_#', 'enc_c_#'** into root folder.
+  * **Stage1 Training:** python stage1.py --dataset_dir <source_dataset_path> --gpu 0 # Then, copy **'gen_#', 'enc_c_#'** into root folder.
   * **PFS-GAN Training:** python PFS-GAN.py --train_dataset <training_target_dataset_path> --test_dataset <testing_dataset_path> --source_dataset <source_dataset_path> --model_name <# of model> --recon_ratio <recon_ratio> --gan_ratio <gan_ratio> --relation_ratio <relation_ratio> --gpu 0
   
 ## Evaluation
