@@ -11,7 +11,6 @@
   * **PFS-GAN Training:** python PFS-GAN.py --train_dataset <training_target_dataset_path> --test_dataset <testing_dataset_path> --source_dataset <source_dataset_path> --model_name <# of model> --recon_ratio <recon_ratio> --gan_ratio <gan_ratio> --relation_ratio <relation_ratio> --gpu 0
   
 ## Evaluation
-* **FID:** 
-
+* **FID:** python FID.py --target_folder <models_path> --base_dataset <base_dataset_path> --source_dataset <source_dataset_path> --target_dataset <training_dataset_path> --model_num <# of model> --gpu 0
 * **KID:** python KID.py --target_folder <models_path> --base_dataset <base_dataset_path> --source_dataset <source_dataset_path> --target_dataset <training_dataset_path> --model_num <# of model> --gpu 0
 
