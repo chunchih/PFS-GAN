@@ -19,7 +19,7 @@
 * **FID:** ```python FID.py --target_folder <models_path> --base_dataset <base_dataset_path> --source_dataset <source_dataset_path> --target_dataset <training_dataset_path> --model_num <# of model> --gpu 0```
 * **KID:** ```python KID.py --target_folder <models_path> --base_dataset <base_dataset_path> --source_dataset <source_dataset_path> --target_dataset <training_dataset_path> --model_num <# of model> --gpu 0```
 
-## License for mseitzer/pytorch-fid
+## License for abdulfatir/gan-metrics-pytorch<https://github.com/abdulfatir/gan-metrics-pytorch>
 This implementation is licensed under the Apache License 2.0.
 
 FID was introduced by Martin Heusel, Hubert Ramsauer, Thomas Unterthiner, Bernhard Nessler and Sepp Hochreiter in "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium", see https://arxiv.org/abs/1706.08500
