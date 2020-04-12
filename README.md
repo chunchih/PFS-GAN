@@ -2,8 +2,8 @@
 * Requirements
   * Python 2.7
   * PyTorch 1.0.1
-  * TorchVision 0.2.1
-  * imageio 2.4.1
+  * TorchVision
+  * imageio
 
 ## Training
 * Baselines Training
