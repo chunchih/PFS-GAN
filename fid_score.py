@@ -1,4 +1,3 @@
-### Source Code Ref.: https://github.com/mseitzer/pytorch-fid
 import os
 import pathlib
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
