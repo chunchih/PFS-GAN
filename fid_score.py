@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+### Source Code Ref.: https://github.com/mseitzer/pytorch-fid
 import os
 import pathlib
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
@@ -37,9 +37,7 @@ def get_activations(images, model, batch_size=64, dims=2048,
         batch = Variable(batch, volatile=True)
         if cuda:
             batch = batch.cuda()
-#	print batch.size()
         pred = model(batch)[0]
-#	print pred.shape
         # If model output is not scalar, apply global spatial average pooling.
         # This happens if you choose a dimensionality not equal 2048.
         if pred.shape[2] != 1 or pred.shape[3] != 1:
@@ -79,13 +77,11 @@ def calculate_frechet_distance(mu1, sigma1, mu2, sigma2, eps=1e-6):
     # Numerical error might give slight imaginary component
     if np.iscomplexobj(covmean):
         if not np.allclose(np.diagonal(covmean).imag, 0, atol=1e-3):
-#	    print "in!!!"
             m = np.max(np.abs(covmean.imag))
             raise ValueError('Imaginary component {}'.format(m))
         covmean = covmean.real
 
     tr_covmean = np.trace(covmean)
-#    print(np.trace(sigma1), np.trace(sigma2), 2*tr_covmean)
     return (diff.dot(diff) + np.trace(sigma1) +
             np.trace(sigma2) - 2 * tr_covmean)
 
@@ -93,7 +89,6 @@ def calculate_frechet_distance(mu1, sigma1, mu2, sigma2, eps=1e-6):
 def calculate_activation_statistics(images, model, batch_size=64,
                                     dims=2048, cuda=False, verbose=False):
     act = get_activations(images, model, batch_size, dims, cuda, verbose)
-#    print act.shape
     mu = np.mean(act, axis=0)
     sigma = np.cov(act, rowvar=False)
     return mu, sigma
@@ -107,14 +102,10 @@ def _compute_statistics_of_path(path, model, batch_size, dims, cuda):
     else:
         path = pathlib.Path(path)
         files = list(path.glob('*.jpg')) + list(path.glob('*.png'))
-#        print path
         imgs = np.array([imread(str(fn)).astype(np.float32) for fn in files])
- #       for i in imgs:
-  #          print len(i.shape)
         imgs = imgs.transpose((0, 3, 1, 2))
         # Rescale images to be between 0 and 1
         imgs = imgs*1.0/255.0
-#	print imgs.shape
         m, s = calculate_activation_statistics(imgs, model, batch_size,
                                                dims, cuda)
     return m, s
@@ -141,7 +132,6 @@ def fid_score_by_combine_img(folder1, folder2):
 
 
 def fid_score_by_folder(path):
-#    for p in paths:
     if not os.path.exists(path):
         raise RuntimeError('Invalid path: %s' % p)
     block_idx = InceptionV3.BLOCK_INDEX_BY_DIM[2048]
