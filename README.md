@@ -1,4 +1,10 @@
 # PFS-GAN
+* Requirements
+  * Python 2.7
+  * PyTorch 1.0.1
+  * TorchVision 0.2.1
+  * imageio 2.4.1
+
 ## Training
 * Baselines Training
   * **BaselineS:** python baselineS.py --dataset_dir <folder_path> --gpu 0
