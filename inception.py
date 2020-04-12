@@ -1,4 +1,3 @@
-### Source Code Ref.: https://github.com/mseitzer/pytorch-fid
 import torch.nn as nn
 import torch.nn.functional as F
 from torchvision import models
