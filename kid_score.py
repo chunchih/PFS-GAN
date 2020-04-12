@@ -1,4 +1,3 @@
-# Source Code Ref.: https://github.com/abdulfatir/gan-metrics-pytorch
 """Calculates the Kernel Inception Distance (KID) to evalulate GANs
 """
 import os
