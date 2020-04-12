@@ -3,7 +3,6 @@
   * Python 2.7
   * PyTorch 1.0.1
   * TorchVision
-  * imageio
 
 ## Training
 * Baselines Training
