@@ -4,6 +4,8 @@
   * PyTorch 1.0.1
   * TorchVision
 
+## Input Images:
+Image size: 64x128 (64x64 Source image(left) + 64x64 Target image (right))
 ## Training
 * Baselines Training
   * **BaselineS:** ```python baselineS.py --dataset_dir <folder_path> --gpu 0```
